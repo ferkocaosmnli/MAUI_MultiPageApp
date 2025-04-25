@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.KrediHesaplama"
+             Title="Kredi Hesaplama">
+
+    <ScrollView>
+        <StackLayout Padding="30" Spacing="20">
+
+            <Label Text="Kredi Türü Seçin:" FontSize="22" />
+            <Picker x:Name="loanTypePicker" Title="Kredi Türleri" FontSize="18">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>İhtiyaç Kredisi</x:String>
+                        <x:String>Taşıt Kredisi</x:String>
+                        <x:String>Konut Kredisi</x:String>
+                        <x:String>Ticari Kredi</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Kredi Tutarı (TL):" FontSize="22" />
+            <Entry x:Name="loanAmountEntry" Keyboard="Numeric" FontSize="18" Placeholder="Örn: 50000" />
+
+            <Label Text="Vade (Ay):" FontSize="22" />
+            <Entry x:Name="loanTermEntry" Keyboard="Numeric" FontSize="18" Placeholder="Örn: 36" />
+
+            <Label Text="Aylık Faiz Oranı (%)" FontSize="22" />
+            <Entry x:Name="interestRateEntry" Keyboard="Numeric" FontSize="18" Placeholder="Örn: 2.5" />
+
+            <Button Text="Hesapla"
+                    Clicked="OnCalculateClicked"
+                    FontSize="20"
+                    BackgroundColor="#2E86DE"
+                    TextColor="White"
+                    CornerRadius="10"
+                    HorizontalOptions="Center"
+                    WidthRequest="200" />
+
+            <Label x:Name="resultLabel" FontSize="20" TextColor="DarkGreen" HorizontalOptions="Center" />
+            <Label x:Name="totalPaymentLabel" FontSize="20" TextColor="DarkGreen" HorizontalOptions="Center" />
+            <Label x:Name="totalInterestLabel" FontSize="20" TextColor="DarkGreen" HorizontalOptions="Center" />
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

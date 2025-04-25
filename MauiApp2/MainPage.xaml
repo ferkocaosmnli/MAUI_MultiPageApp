@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.MainPage"
+             Title="Ana Sayfa">
+
+    <ScrollView>
+        <StackLayout Padding="30" Spacing="25" VerticalOptions="CenterAndExpand">
+
+            <Label Text="Ana Sayfa"
+                   FontSize="32"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Image x:Name="profileImage"
+                   Source="myavatar.png"
+                   WidthRequest="140"
+                   HeightRequest="140"
+                   HorizontalOptions="Center"
+                   Margin="0,10" />
+
+            <Label Text="Ferhat Kocaosmanli"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="No: 22670310082"
+                   FontSize="24"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Bartın Üniversitesi Bilgisayar Mühendisliği"
+                   FontSize="20"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="Center" />
+
+            <Label Text="ÖDEV-2"
+                   FontSize="40"
+                   FontAttributes="Bold"
+                   TextColor="DarkBlue"
+                   HorizontalOptions="Center" />
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

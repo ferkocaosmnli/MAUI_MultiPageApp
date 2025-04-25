@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.VucutKitleIndeksi"
+             Title="BMI Hesaplayıcı">
+
+    <ScrollView>
+        <StackLayout Padding="30" Spacing="20">
+        
+            <Label Text="Vücut Kitle İndeksi Hesaplama"
+                   FontSize="30"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Kilo (kg):" FontSize="22" />
+            <Entry x:Name="weightEntry"
+                   Keyboard="Numeric"
+                   Placeholder="Kilonuzu girin"
+                   FontSize="20" />
+
+            <Label Text="Boy (m):" FontSize="22" />
+            <Entry x:Name="heightEntry"
+                   Keyboard="Numeric"
+                   Placeholder="Boyunuzu girin"
+                   FontSize="20" />
+
+            <Button Text="Hesapla"
+                    Clicked="OnCalculateClicked"
+                    FontSize="22"
+                    BackgroundColor="#2E86DE"
+                    TextColor="White"
+                    CornerRadius="10"
+                    HorizontalOptions="Center"
+                    WidthRequest="200" />
+
+            <Label x:Name="resultLabel"
+                   FontSize="24"
+                   TextColor="Green"
+                   HorizontalOptions="Center" />
+
+            <Label x:Name="categoryLabel"
+                   FontSize="22"
+                   TextColor="DarkGreen"
+                   HorizontalOptions="Center" />
+                   
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
